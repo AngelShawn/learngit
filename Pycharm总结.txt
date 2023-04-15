@@ -1,0 +1,13 @@
+1.先下载好了破解版的pycharm并且按照教程安装好了python
+2.在配置环境变量的时候注意到了要把python的路径粘到编辑里面。
+3.添加解释器完成后可以运行初始程序。
+
+配置镜像源的三种方法
+1.pycharm的内部配置（pip不行的话要装一下pip的环境变量并用cmd检查是否安装成功）
+如果遇到pip的版本问题
+实际上是pip版本出现了问题，现在的版本是21.1.2，需要升级到22.3.1
+按照提示，在cmd输入命令（按win+R打开）：python -m pip install --upgrade pip即可解决。
+2.手动添加镜像源
+pip install 下载的模块名 -i https://pypi.tuna.tsinghua.edu.cn/simple
+3.永久配置镜像源
+用cmd执行pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
