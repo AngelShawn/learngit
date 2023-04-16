@@ -1,0 +1,37 @@
+1.windows在路径安装的时候必须保证有一个空的文件夹或者直接放在D盘的根目录下
+2.Windows打开Anaconda Prompt
+3.验证conda已被安装 conda --version
+4.更新conda至最新版本conda update conda
+5.查看conda帮助信息conda --help或conda -h
+6.创建新环境conda create --name <env_name> <package_names>
+在调查python版本的时候可以先用cmd查看python版本，只用输入3.11就可以
+7.切换环境activate <env_name>
+8.退出环境deactivate
+9.显示已创建环境conda info --envs或conda info -e或conda env list
+10.复制环境conda create --name <new_env_name> --clone <copied_env_name>
+conda create --name py2 --clone python2 即为克隆名为“python2”的环境，克隆后的新环境名为“py2”。此时，环境中将同时存在“python2”和“py2”环境，且两个环境的配置相同。
+11.删除环境conda remove --name <env_name> --all
+
+管理包操作
+1.精确查找conda search --full-name <package_full_name>
+2.模糊查找conda search <text> ，conda search py 即查找含有“py”字段的包，有哪些版本可供安装。
+3.获取当前环境中已安装的包信息conda list执行上述命令后将在终端显示当前环境已安装包的包名及其版本号。
+4.在指定环境中安装包conda install --name <env_name> <package_name>
+例如： conda install --name python2 pandas 即在名为“python2”的环境中安装pandas包。
+5.在当前环境中安装包conda install <package_name>
+例如： conda install pandas 即在当前环境中安装pandas包。
+6.使用pip安装包
+pip install <package_name>
+如： pip install see 即安装see包。
+7.卸载指定环境中的包conda remove --name <env_name> <package_name>
+例如： conda remove --name python2 pandas 即卸载名为“python2”中的pandas包。
+8.卸载当前环境中的包conda remove <package_name>
+例如： conda remove pandas 即在当前环境中卸载pandas包。
+9.更新所有包
+conda update --all或conda upgrade --all
+建议：在安装Anaconda之后执行上述命令更新Anaconda中的所有包至最新版本，便于使用。
+10.更新指定包
+conda update <package_name>或conda upgrade <package_name>
+更新多个指定包，则包名以空格隔开，向后排列。如： conda update pandas numpy matplotlib 即更新pandas、numpy、matplotlib包。
+
+
